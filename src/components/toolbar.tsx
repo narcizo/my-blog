@@ -7,6 +7,7 @@ import Image from "next/image";
 
 import logoImg from '@/../public/medium.png';
 import ToggleTheme from "./toggle-theme";
+import Link from "next/link";
 
 export default function Toolbar (){
     return (
@@ -18,8 +19,10 @@ export default function Toolbar (){
                     <Button variant="ghost">All Posts</Button>
                 </div>
                 <div className="flex items-center justify-center space-x-4">
-                    <Button variant="ghost"> 
-                        <Github />
+                    <Button asChild variant="ghost"> 
+                        <Link target="_blank" href="https://www.github.com/narcizo">
+                            <Github />
+                        </Link>
                     </Button>
                     <ToggleTheme/>
                 </div>
